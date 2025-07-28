@@ -1,0 +1,20 @@
+project: #项目信息
+ name: log-demo
+  
+spring: #应用配置
+  application:
+    name: ${project.name}   
+ 
+server: #系统配置
+  port: 10000
+  
+management:
+  tracing:
+    sampling:
+      probability: 1.0
+#  otlp:
+#    tracing:
+#      endpoint: http://localhost:4318/v1/traces
+#  zipkin:
+#    tracing:
+#      endpoint: http://localhost:9411/api/v2/spans

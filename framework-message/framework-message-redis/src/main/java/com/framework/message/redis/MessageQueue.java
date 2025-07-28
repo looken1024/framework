@@ -1,0 +1,53 @@
+/**************************************************************************************** 
+ Copyright © 2003-2012 hbasesoft Corporation. All rights reserved. Reproduction or       <br>
+ transmission in whole or in part, in any form or by any means, electronic, mechanical <br>
+ or otherwise, is prohibited without the prior written consent of the copyright owner. <br>
+ ****************************************************************************************/
+package com.framework.message.redis;
+
+import java.util.List;
+
+/**
+ * <Description> <br>
+ * 
+ * @author 王伟<br>
+ * @version 1.0<br>
+ * @taskId <br>
+ * @CreateDate 2018年6月27日 <br>
+ * @since V1.0<br>
+ * @see com.framework.message.redis <br>
+ */
+public interface MessageQueue {
+
+    /**
+     * Description: <br>
+     * 
+     * @author 王伟<br>
+     * @taskId <br>
+     * @param key
+     * @param value <br>
+     */
+    void push(String key, byte[] value);
+
+    /**
+     * Description: <br>
+     * 081120
+     * 
+     * @author 王伟<br>
+     * @taskId <br>
+     * @param key
+     * @return <br>
+     */
+    List<byte[]> popList(String key);
+
+    /**
+     * Description: <br>
+     * 
+     * @author 王伟<br>
+     * @taskId <br>
+     * @param timeout
+     * @param key
+     * @return <br>
+     */
+    List<byte[]> pop(int timeout, String key);
+}

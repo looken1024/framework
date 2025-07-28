@@ -1,0 +1,36 @@
+/**************************************************************************************** 
+ Copyright © 2023-2028 hbasesoft Corporation. All rights reserved. Reproduction or     <br>
+ transmission in whole or in part, in any form or by any means, electronic, mechanical <br>
+ or otherwise, is prohibited without the prior written consent of the copyright owner. <br>
+ ****************************************************************************************/
+ 
+package ${package}.entity;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+import org.hibernate.annotations.GenericGenerator;
+
+import com.hbasesoft.framework.db.core.BaseEntity;
+
+/**
+ * <Description> ${table.name}的Entity<br>
+ * 
+ * @author 工具生成<br>
+ * @version 1.0<br>
+ * @CreateDate ${DATE} <br>
+ * @since V1.0<br>
+ * @see com.hbasesoft.framework.api.bean.BaseEntity <br>
+ */
+$!{ENTITY}
+public class ${table.code}Entity extends BaseEntity {
+
+    /**
+     * serialVersionUID
+     */
+    private static final long serialVersionUID = 1L;
+${CODE}
+}

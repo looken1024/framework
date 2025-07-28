@@ -1,0 +1,43 @@
+{
+    "name": "stateMachine",
+    "version": "1.0",
+    "begin": "B",
+    "end": "D,E",
+    "error": "E",
+    "stateMachine": {
+        "A": [{
+                "action": "e1",
+                "end": "C",
+                "children": [{
+                        "component": "Child02Component",
+                        "children": [{
+                            "component": "DemoComponent"
+                        }]
+                    },
+                    {
+                        "component": "Child01Component",
+                        "children": [{
+                            "component": "Child03Component"
+                        }]
+                    }
+                ]
+            },
+            {
+                "action": "e2",
+                "end": "D",
+                "error": "1001=C, 1002=D, *=E",
+                "component": "Child02Component"
+            }
+        ],
+        "B": [{
+            "action": "e1",
+            "end": "A",
+            "component": "Child02Component"
+        }],
+        "C": [{
+            "action": "e1",
+            "end": "D",
+            "component": "Child01Component"
+        }]
+    }
+}
